@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.css.map">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css.map">
+	<link rel="stylesheet" href="css/bootstrap-grid.min.css.map">
+	<link rel="stylesheet" href="css/bootstrap.min.css.map">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="jquery.slim.min.js"></script>
+	<script src="popper.min.js"></script>
+	<script src="bundle.min.js"></script>
+
+	<script>
+		function checkblk() {
+			let Username;
+			let email;
+			let Password1;
+			let password2;
+
+			Username = document.getElementById("username").value;
+			email = document.getElementById("email").value;
+			Password1 = document.getElementById("pwd").value;
+			password2 = document.getElementById("pwd2").value;
+
+			if (Username == "" || email == "" || password1 == "" || password2 == "") {
+				window.alert("Complete your information");
+			}
+			if (password1 != password2) {
+				window.alert("inter the same password");
+			}
+			else {
+				let result = confirm("Are you sure to register your information? ");
+
+				if (result == true) {
+					document.register.submit();
+				}
+			}
+		}
+
+	</script>
+
+</head>
+
+
+<body class="img js-fullheight" background="images/pexels-rickyrecap-1907785.jpg"
+	style="background-size: cover;background-repeat: no-repeat;background-attachment: fixed;backdrop-filter:blur(1px); ">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">sign up</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+						<form name="register" action="action_register.php" class="signin-form">
+							<div class="form-group">
+								<input type="text" id="username" class="form-control" placeholder="Username" required>
+							</div>
+							<div class="form-group">
+								<input type="email" id="email" class="form-control" placeholder="email" required>
+							</div>
+							<div class="form-group">
+								<input type="password" id="pwd" class="form-control" placeholder="Password" required>
+							</div>
+							<div class="form-group">
+								<input type="password" id="pwd2" class="form-control" placeholder="Repeat Password"
+									required>
+							</div>
+							<div class="form-group">
+								<button type="button" class="form-control btn btn-primary submit px-3"
+									onclick="checkblk()">Sign up</button>
+							</div>
+							<div class="form-group d-md-flex">
+								<div class="w-50">
+									<label
+										style="display: block;position: relative;padding-left: 30px;margin-bottom: 12px;color: #fbceb5;"><input
+											style="margin-bottom:0 ;" type="checkbox" name="remember">Remember
+										Me</label>
+									<span class="checkmark"></span>
+									</label>
+								</div>
+							</div>
+						</form>
+						<p class="w-100 text-center">&mdash; have an account?<a href="login.html"
+								style="color: #fbceb5;"> Sign In &mdash;</a> </p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
